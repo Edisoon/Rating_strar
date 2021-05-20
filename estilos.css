@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#fed151, #de981f );
+}
+.wrapper{
+    background-color: #f6f6f6;
+    max-width: 36rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+.wrapper .content{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper .outer{
+    height: 13.5rem;
+    width: 13.5rem;
+    overflow: hidden;
+}
+.outer .emoji{
+    height: 500%;
+    display: flex;
+    flex-direction: column;
+}
+input[type="radio"]{
+    display: none;
+}
+
+.outer li{
+    height: 20%;
+    width: 100%;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+#star-2:checked ~ .content .outer .slideimg{
+    margin-top: -13.5rem;
+}
+#star-3:checked ~ .content .outer .slideimg{
+    margin-top: -27.5rem;
+}
+#star-4:checked ~ .content .outer .slideimg{
+    margin-top: -41.5rem;
+}
+#star-5:checked ~ .content .outer .slideimg{
+    margin-top: -54rem;
+}
+
+.outer li img{
+    height: 100%;
+    width: 100%;
+}
+.content .stars{
+    margin-top: 3rem;
+}
+.stars label{
+    font-size: 3rem;
+    margin: 0 0.3rem;
+    color: #ccc;
+}
+#star-1:hover ~ .content .stars .star-1,
+#star-1:checked ~ .content .stars .star-1,
+
+#star-2:hover ~ .content .stars .star-1,
+#star-2:hover ~ .content .stars .star-2,
+#star-2:checked ~ .content .stars .star-1,
+#star-2:checked ~ .content .stars .star-2,
+
+#star-3:hover ~ .content .stars .star-1,
+#star-3:hover ~ .content .stars .star-2,
+#star-3:hover ~ .content .stars .star-3,
+#star-3:checked ~ .content .stars .star-1,
+#star-3:checked ~ .content .stars .star-2,
+#star-3:checked ~ .content .stars .star-3,
+
+#star-4:hover ~ .content .stars .star-1,
+#star-4:hover ~ .content .stars .star-2,
+#star-4:hover ~ .content .stars .star-3,
+#star-4:hover ~ .content .stars .star-4,
+#star-4:checked ~ .content .stars .star-1,
+#star-4:checked ~ .content .stars .star-2,
+#star-4:checked ~ .content .stars .star-3,
+#star-4:checked ~ .content .stars .star-4,
+
+#star-5:hover ~ .content .stars .star-1,
+#star-5:hover ~ .content .stars .star-2,
+#star-5:hover ~ .content .stars .star-3,
+#star-5:hover ~ .content .stars .star-4,
+#star-5:hover ~ .content .stars .star-5,
+#star-5:checked ~ .content .stars .star-1,
+#star-5:checked ~ .content .stars .star-2,
+#star-5:checked ~ .content .stars .star-3,
+#star-5:checked ~ .content .stars .star-4,
+#star-5:checked ~ .content .stars .star-5{
+    color: #fed151;
+}
+.wrapper .footer{
+    height: 5.5rem;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    background: #f2f2f2;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer span{
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.footer .text::before{
+    content: "Rate your experience";
+}
+.footer .num::before{
+    content: "0 out of 5";
+}
+#star-1:checked ~ .footer .text::before{
+    content: "I Just Hate it";
+}
+#star-1:checked ~ .footer .num::before{
+    content: "1 out of 5";
+}
+
+#star-2:checked ~ .footer .text::before{
+    content: "I don't like it";
+}
+#star-2:checked ~ .footer .num::before{
+    content: "2 out of 5";
+}
+
+#star-3:checked ~ .footer .text::before{
+    content: "It is  awesome";
+}
+#star-3:checked ~ .footer .num::before{
+    content: "3 out of 5";
+}
+
+#star-4:checked ~ .footer .text::before{
+    content: "I Just like it";
+}
+#star-4:checked ~ .footer .num::before{
+    content: "4 out of 5";
+}
+
+#star-5:checked ~ .footer .text::before{
+    content: "I Just love it";
+}
+#star-5:checked ~ .footer .num::before{
+    content: "5 out of 5";
+}
